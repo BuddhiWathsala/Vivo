@@ -1,4 +1,4 @@
-body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background:url(../images/bg.jpg) right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;}
+body {	color:#333;	font:300 15px/15px Roboto,Arial,Helvetica;background-color: #e6eeff; right no-repeat fixed #fff; -webkit-font-smoothing:antialiased;}
 
 a{color:#00a9c6; text-decoration:none;}
 a:hover{color:#666;}
@@ -32,8 +32,8 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 .topbar {background:url(../images/lines.png);	height:5px;position: fixed;top: 0;width: 100%;z-index: 1000;}
 .navbar-nav > li > a{font-size: 1em;line-height: 3.6em;}
 .navbar-fixed-top{top: 5px;}
-.navbar-inverse{background: #111;}
-.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{background: none;color: #E89F10;}
+.navbar-inverse{background: #001a4d;}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{background: none;color: red;}
 
 #head,.carousel{margin-top: 0;}
 
