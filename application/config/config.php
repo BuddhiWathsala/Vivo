@@ -23,7 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/Vivo/';
+$base = null;
+if($_SERVER['HTTP_HOST']=='localhost')
+{
+  $base = 'http://localhost/Vivo/';
+}else {
+  $base = 'https://salty-citadel-93012.herokuapp.com/';
+}
+$config['base_url'] = $base;
 
 /*
 |--------------------------------------------------------------------------
