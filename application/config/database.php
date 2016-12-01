@@ -75,10 +75,17 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
+<<<<<<< HEAD
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
 	'database' => 'php',
+=======
+	'hostname' => 'us-cdbr-azure-central-a.cloudapp.net',
+	'username' => 'b2037e1b776dca',
+	'password' => '71224c6e',
+	'database' => 'vivo',
+>>>>>>> 2e0343e90e93650c008f1b0fdec7aea9fb672da3
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

@@ -1,0 +1,14 @@
+insert into category values(1,'Wedding');
+insert into photographer values(1,'LahiruSena','da39a3ee5e6b4b0d3255bfef95601890afd80709',0716953591,0112919509,
+'lahirusena@gmail.com','2015-11-07',5,NULL,'Colombo',5,50,'/admin',2,'Lahiru Senadheera');
+
+insert into photographer(username,password,mobile_phone,land_phone,email,join_date,
+experience,profile_picture,district,no_of_events,points,portfolio_path,category) 
+
+values('ThashiraBate','da39a3ee5e6b4b0d3255bfef95601890afd80709',0716953591,0112919509,
+'thashira1993@gmail.com','2015-11-07',5,NULL,'Gampaha',5,50,'/admin',2,'Thashira Heshan');
+
+alter table event_allocation drop foreign key photographer;
+
+insert into category values(3,'Fashion Design');
+insert into category values(4,'Products');
