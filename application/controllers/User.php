@@ -33,7 +33,7 @@ class User extends CI_Controller
 	function logout(){
 
 		$this->login->loggout();
-		redirect('Welcome');
+		redirect();
 
 	}
 }
