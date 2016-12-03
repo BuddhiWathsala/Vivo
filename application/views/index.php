@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
 <html lang="en">
@@ -6,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<title>Cyrus Studio</title>
+<title>VIVO Photography</title>
 
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
@@ -15,21 +16,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
 <!-- bootstrap -->
-<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="<?php echo base_url('assets/bootstrap/css/bootstrap.min.css'); ?>" />
 
 <!-- animate.css -->
-<link rel="stylesheet" href="assets/animate/animate.css" />
-<link rel="stylesheet" href="assets/animate/set.css" />
+<link rel="stylesheet" href="<?php echo base_url('assets/animate/animate.css'); ?>" />
+<link rel="stylesheet" href="<?php echo base_url('assets/animate/set.css'); ?>" />
 
 <!-- gallery -->
-<link rel="stylesheet" href="assets/gallery/blueimp-gallery.min.css">
+<link rel="stylesheet" href="<?php echo base_url('assets/gallery/blueimp-gallery.min.css'); ?>">
 
 <!-- favicon -->
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo base_url('images/favicon.ico');?>" type="image/x-icon">
+<link rel="icon" href="<?php echo base_url('images/favicon.ico');?>" type="image/x-icon">
 
 
-<link rel="stylesheet" href="assets/style.css">
+<link rel="stylesheet" href="<?php echo base_url('assets/style.css'); ?>">
 
 </head>
 
@@ -44,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
-              <a class="navbar-brand" href="#home"><img src="images/logo.png" alt="logo"></a>
+              <a class="navbar-brand" href="#home"><img src="<?php echo base_url('images/logo.png'); ?>" alt="logo"></a>
               <!-- #Logo Ends -->
 
 
@@ -66,6 +67,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                  <li ><a href="#works">Works</a></li>
                  <li ><a href="#partners">Partners</a></li>
                  <li ><a href="#contact">Contact</a></li>
+                 <!--<li><a href="#catagory">Catagory</a></li>-->
               </ul>
             </div>
             <!-- #Nav Ends -->
@@ -81,30 +83,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <div id="home">
+
 <!-- Slider Starts -->
 <div id="myCarousel" class="carousel slide banner-slider animated bounceInDown" data-ride="carousel">     
       <div class="carousel-inner">
         <!-- Item 1 -->
-        <div class="item active">
+        <!--<div class="item active">
           <img src="images/back1.jpg" alt="banner">
+        </div>-->
+        <!-- #Item 1 -->
+
+        <!-- Item 1 -->
+    <div class="item active">
+          <img src="<?php echo base_url('images/back2.jpg'); ?>" alt="banner">
         </div>
         <!-- #Item 1 -->
 
         <!-- Item 1 -->
         <div class="item">
-          <img src="images/back2.jpg" alt="banner">
+          <img src="<?php echo base_url('images/back3.jpg'); ?>" alt="banner">
         </div>
         <!-- #Item 1 -->
 
         <!-- Item 1 -->
         <div class="item">
-          <img src="images/back3.jpg" alt="banner">
-        </div>
-        <!-- #Item 1 -->
-
-        <!-- Item 1 -->
-        <div class="item">
-          <img src="images/back4.jpg" alt="banner">
+          <img src="<?php echo base_url('images/back4.jpg'); ?>" alt="banner">
         </div>
         <!-- #Item 1 -->
       </div>
@@ -124,23 +127,25 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Cirlce Starts -->
 <div id="about"  class="container spacer about">
-<h2 class="text-center wowload fadeInUp">Creative photographers of London</h2>  
+<h2 class="text-center wowload fadeInUp" style="color: white">Creative photographers of VIVO</h2>  
   <div class="row">
   <div class="col-sm-6 wowload fadeInLeft">
-    <h4><i class="fa fa-camera-retro"></i> Introduction </h4>
-    <p>Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs, lead by passionate and uber progressive team that lives and breathes design. Creative digital agency for sleek and sophisticated solutions for mobile, websites and software designs.</p>
-    
-
+    <h4 style="color: white"><i class="fa fa-camera-retro"></i> Introduction</h4>
+    <p style="color: white">We are the total event solution company that believes great work comes from the heart, mind, and gut! Which provides one stop for all event requirements.We ensure all your special events are captured by us.Vivo photography prides ourselves on giving maximum value for money, researching options and working at all times to your exact budget and requirements. It is our success in this area that allows our clients to come back to us time and time again for fantastic events.</p>
   </div>
+  
   <div class="col-sm-6 wowload fadeInRight">
-  <h4><i class="fa fa-coffee"></i> Passion</h4>
-  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>    
+  <h4 style="color: white"><i class="fa fa-flag"></i> Vision</h4>
+  <p style="color: white">We all photograph for our own reasons. For many of us, photography is a long journey, starting with capturing images that might be considered snapshots such as a vacation or family celebration. For many, the satisfaction of taking those snapshots is enough.  We dig for deeper meaning by seeking to convey our inspiration, emotions and ideals of our own perfect world.</p>    
   </div>
   </div>
 
   <div class="services">
-  <h3 class="text-center wowload fadeInUp">Services</h3>
+  <h3 class="text-center wowload fadeInUp" style="color: white">Services</h3>
 	<ul class="row text-center list-inline  wowload bounceInUp">
+
+
+    
    		<li>
             <span><i class="fa fa-camera-retro"></i><b>Photography</b></span>
         </li>
@@ -148,7 +153,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <span><i class="fa fa-cube"></i><b>Studio</b></span>
         </li>
         <li>
-            <span><i class="fa fa-graduation-cap"></i><b>Trainings</b></span>
+            <span><i class="fa fa-graduation-cap"></i><b>Convocations</b></span>
         </li>
         <li>
             <span><i class="fa fa-umbrella"></i><b>Travel</b></span>
@@ -161,104 +166,104 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!-- #Cirlce Ends -->
 
-
+<?php echo base_url(); ?>
 <!-- works -->
 <div id="works"  class=" clearfix grid"> 
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/1.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/1.png');?>" alt="img01"/>
         <figcaption>
             <h2>Nature</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/1.jpg" title="1" data-gallery>View more</a></p>            
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/1.png');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/2.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/2.jpg');?>" alt="img01"/>
         <figcaption>
-            <h2>Events</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/2.jpg" title="1" data-gallery>View more</a></p>            
+            <h2>Wedding</h2>
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/2.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/3.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/3.jpg');?>" alt="img01"/>
         <figcaption>
-            <h2>music</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/3.jpg" title="1" data-gallery>View more</a></p>            
+            <h2>Functions</h2>
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/3.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/4.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/4.jpg');?>" alt="img01"/>
         <figcaption>
-            <h2>Vintage</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/4.jpg" title="1" data-gallery>View more</a></p>            
+            <h2>Products</h2>
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/4.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/5.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/5.jpg');?>" alt="img01"/>
         <figcaption>
-            <h2>Typers</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/5.jpg" title="1" data-gallery>View more</a></p>            
+            <h2>BirthDays</h2>
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/5.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
      
      <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/6.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/6.jpg');?>" alt="img01"/>
         <figcaption>
-            <h2>hotel</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/6.jpg" title="1" data-gallery>View more</a></p>            
+            <h2>Convocations</h2>
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/6.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/7.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/7.jpg');?>" alt="img01"/>
         <figcaption>
-            <h2>Chinese</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/7.jpg" title="1" data-gallery>View more</a></p>            
+            <h2>Ceramony</h2>
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/7.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/8.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/8.jpg');?>" alt="img01"/>
         <figcaption>
             <h2>Dicrap</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/8.jpg" title="1" data-gallery>View more</a></p>            
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/8.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/9.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/9.jpg');?>" alt="img01"/>
         <figcaption>
             <h2>Coffee</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/9.jpg" title="1" data-gallery>View more</a></p>            
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/9.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/10.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/10.jpg');?>" alt="img01"/>
         <figcaption>
             <h2>cameras</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/10.jpg" title="1" data-gallery>View more</a></p>            
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/10.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/11.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/11.jpg');?>" alt="img01"/>
         <figcaption>
             <h2>design</h2>
-            <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/11.jpg" title="1" data-gallery>View more</a></p>            
+            <p>Vivo Photography<br>
+            <a href="<?php echo base_url('images/portfolio/11.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
-        <img src="images/portfolio/12.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/portfolio/12.jpg');?>" alt="img01"/>
         <figcaption>
             <h2>studio</h2>
             <p>Lily likes to play with crayons and pencils<br>
-            <a href="images/portfolio/12.jpg" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/12.jpg');?>" title="1" data-gallery>View more</a></p>            
         </figcaption>
     </figure>
     
@@ -321,41 +326,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
 <!-- team -->
-<h3 class="text-center  wowload fadeInUp">Our team</h3>
-<p class="text-center  wowload fadeInLeft">Our creative team that is making everything possible</p>
+<h3 class="text-center  wowload fadeInUp" style="color: white">Our team</h3>
+<p class="text-center  wowload fadeInLeft" style="color: white">Our creative team that is making everything possible</p>
 <div class="row grid team  wowload fadeInUpBig">	
 	<div class=" col-sm-3 col-xs-6">
 	<figure class="effect-chico">
-        <img src="images/team/8.jpg" alt="img01" class="img-responsive" />
+        <img src="<?php echo base_url('images/team/8.jpg');?>" alt="img01" class="img-responsive" />
         <figcaption>
-            <p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
+            <p><b>Lahiru Sen</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
         </figcaption>
     </figure>
     </div>
 
     <div class=" col-sm-3 col-xs-6">
 	<figure class="effect-chico">
-        <img src="images/team/10.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/team/10.jpg');?>" alt="img01"/>
         <figcaption>            
-            <p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
+            <p><b>Mahesh Bansa</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
         </figcaption>
     </figure>
     </div>
 
     <div class=" col-sm-3 col-xs-6">
 	<figure class="effect-chico">
-        <img src="images/team/12.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/team/12.jpg');?>" alt="img01"/>
         <figcaption>
-            <p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>          
+            <p><b>Pramod Weera</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>          
         </figcaption>
     </figure>
     </div>
 
     <div class=" col-sm-3 col-xs-6">
 	<figure class="effect-chico">
-        <img src="images/team/17.jpg" alt="img01"/>
+        <img src="<?php echo base_url('images/team/17.jpg');?>" alt="img01"/>
         <figcaption>
-            <p><b>Barbara Husto</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>
+            <p><b>Dhanu Kalshan</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>
         </figcaption>
     </figure>
     </div>
@@ -379,16 +384,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="overlay spacer">
 <div class="container">
 <div class="row text-center  wowload fadeInDownBig">
-	<div class="col-sm-3 col-xs-6">
+	<div class="col-sm-3 col-xs-6" style="position: left">
 	<i class="fa fa-smile-o  fa-5x"></i><h4>24 Clients</h4>
 	</div>
-	<div class="col-sm-3 col-xs-6">
+	<div class="col-sm-3 col-xs-6" style="position: right">
 	<i class="fa fa-rocket  fa-5x"></i><h4>75 Projects</h4>
 	</div>
 	<div class="col-sm-3 col-xs-6">
 	<i class="fa fa-cloud-download  fa-5x"></i><h4>454 Downloads</h4>
 	</div>
-	<div class="col-sm-3 col-xs-6">
+	<div class="col-sm-3 col-xs-6" style="position: middle">
 	<i class="fa fa-map-marker fa-5x"></i><h4>2 Offices</h4>
 	</div>
 </div>
@@ -407,13 +412,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="contact" class="spacer">
 <!--Contact Starts-->
 <div class="container contactform center">
-<h2 class="text-center  wowload fadeInUp">Get in touch to start your project</h2>
+<h2 class="text-center  wowload fadeInUp" style="color: white">Get in touch to Login</h2>
   <div class="row wowload fadeInLeftBig">      
-      <div class="col-sm-6 col-sm-offset-3 col-xs-12">      
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Company">
-        <textarea rows="5" placeholder="Message"></textarea>
-        <button class="btn btn-primary"><i class="fa fa-paper-plane"></i> Send</button>
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">   
+      <form action="<?php echo base_url('index.php/User/login');?>" method="POST">
+        
+        <input class="fa fa-user-o" type="text" placeholder="User Name" name="username">
+        <input type="Password" placeholder="Password" name="password">
+        <!--<textarea rows="5" placeholder="Message"></textarea>-->
+        <button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Login</button>
+      </form>   
       </div>
   </div>
 
@@ -428,7 +436,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- Footer Starts -->
 <div class="footer text-center spacer">
 <p class="wowload flipInX"><a href="#"><i class="fa fa-facebook fa-2x"></i></a> <a href="#"><i class="fa fa-instagram fa-2x"></i></a> <a href="#"><i class="fa fa-twitter fa-2x"></i></a> <a href="#"><i class="fa fa-flickr fa-2x"></i></a> </p>
-Copyright 2014 Cyrus Creative Studio. All rights reserved.
+Copyright 2014 VIVO Creative Studio. All rights reserved.
 </div>
 <!-- # Footer Ends -->
 <a href="#home" class="gototop "><i class="fa fa-angle-up  fa-3x"></i></a>
@@ -452,24 +460,24 @@ Copyright 2014 Cyrus Creative Studio. All rights reserved.
 
 
 <!-- jquery -->
-<script src="assets/jquery.js"></script>
+<script src="<?php echo base_url('assets/jquery.js'); ?>"></script>
 
 <!-- wow script -->
-<script src="assets/wow/wow.min.js"></script>
+<script src="<?php echo base_url('assets/wow/wow.min.js');?>"></script>
 
 
 <!-- boostrap -->
-<script src="assets/bootstrap/js/bootstrap.js" type="text/javascript" ></script>
+<script src="<?php echo base_url('assets/bootstrap/js/bootstrap.js');?>" type="text/javascript" ></script>
 
 <!-- jquery mobile -->
-<script src="assets/mobile/touchSwipe.min.js"></script>
-<script src="assets/respond/respond.js"></script>
+<script src="<?php echo base_url('assets/mobile/touchSwipe.min.js');?>"></script>
+<script src="<?php echo base_url('assets/respond/respond.js'); ?>"></script>
 
 <!-- gallery -->
-<script src="assets/gallery/jquery.blueimp-gallery.min.js"></script>
+<script src="<?php echo base_url('assets/gallery/jquery.blueimp-gallery.min.js');?>"></script>
 
 <!-- custom script -->
-<script src="assets/script.js"></script>
+<script src="<?php echo base_url('assets/script.js');?>"></script>
 
 </body>
 </html>
