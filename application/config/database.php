@@ -94,3 +94,17 @@ $db['default'] = array(
 	'failover' => array(),
 	'save_queries' => TRUE
 );
+
+$config['dsn'] = "mysql:host=us-cdbr-azure-central-a.cloudapp.net;dbname=vivo";
+$config['hostname'] = "us-cdbr-azure-central-a.cloudapp.net";
+$config['username'] = "b2037e1b776dca";
+$config['password'] = "71224c6e";
+$config['database'] = "vivo";
+$config['dbdriver'] = "pdo";
+$config['dbprefix'] = "";
+$config['pconnect'] = TRUE;
+$config['db_debug'] = TRUE;
+$config['cache_on'] = FALSE;
+$config['cachedir'] = "";
+$config['char_set'] = "utf8";
+$config['dbcollat'] = "utf8_general_ci";

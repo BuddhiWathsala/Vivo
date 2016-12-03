@@ -19,6 +19,25 @@ class M_Photographer_table extends CI_Model {
    * @see https://codeigniter.com/user_guide/general/urls.html
    */
   //get details from email
+
+  //get all photographer details
+  public function getAllPhotographers()
+	{
+    $this->load->database();
+
+    $photographers = $this->db->get("photographer");
+    return ($photographers->result());
+	}
+
+//get photographer detail from id
+  public function getPhotographerFromID($id)
+	{
+    $this->load->database();
+
+    $photographers = $this->db->get_where("photographer",array('photographer_id'=>$id));
+    return ($photographers->result());
+	}
+
   public function getAllDetailsFromUserName($username)
   {
     //echo "p : ".$username;

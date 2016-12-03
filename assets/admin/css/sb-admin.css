@@ -8,7 +8,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    //background-color: #99bbff;
 }
 
 @media(min-width:768px) {
@@ -30,6 +30,7 @@ body {
 .huge {
     font-size: 50px;
     line-height: normal;
+
 }
 
 @media(min-width:768px) {
@@ -46,18 +47,20 @@ body {
 
 .top-nav {
     padding: 0 15px;
+
 }
 
 .top-nav>li {
     display: inline-block;
     float: left;
+
 }
 
 .top-nav>li>a {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #fff;
 }
 
 .top-nav>li>a:hover,
@@ -65,7 +68,7 @@ body {
 .top-nav>.open>a,
 .top-nav>.open>a:hover,
 .top-nav>.open>a:focus {
-    color: #fff;
+    color: white;
     background-color: #000;
 }
 
@@ -141,18 +144,28 @@ ul.alert-dropdown {
 
 .side-nav>li>ul {
     padding: 0;
+    color: #fff;
 }
 
 .side-nav>li>ul>li>a {
     display: block;
     padding: 10px 15px 10px 38px;
     text-decoration: none;
-    color: #999;
+    color: #fff;
 }
 
 .side-nav>li>ul>li>a:hover {
     color: #fff;
 }
+
+/*.side-nav{
+  background-color: #80aaff;
+  color: #fff;
+}
+.side-nav li>ul>li{
+  color: white;
+
+}*/
 
 /* Flot Chart Containers */
 
@@ -170,6 +183,7 @@ ul.alert-dropdown {
 
 .huge {
     font-size: 40px;
+
 }
 
 .panel-green {
