@@ -1,4 +1,4 @@
-<div class="collapse navbar-collapse navbar-ex1-collapse">
+
     <ul class="nav navbar-nav side-nav">
 
       <li>
@@ -15,7 +15,7 @@
                   <a href="<?php echo base_url();?>index.php/C_Admin_Page_Navigate/addPhotographer">Add Photographer</a>
               </li>
               <li>
-                  <a href="#">Top rankings</a>
+                  <a href="<?php echo base_url();?>index.php/C_Admin_Page_Navigate/topRankings">Top rankings</a>
               </li>
           </ul>
       </li>
@@ -48,4 +48,3 @@
         </li>
 
     </ul>
-</div>

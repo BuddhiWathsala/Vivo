@@ -62,4 +62,14 @@ class C_Admin_Page_Navigate extends CI_Controller {
 
     $this->load->view('admin/viewMorePhotographer',$returnData);
   }
+
+
+  public function topRankings()
+  {
+
+    $this->load->model('M_Photographer_table');
+    $photographers = $this->M_Photographer_table->getRankings();
+    $data["photographers"] = $photographers;
+    $this->load->view('admin/topRankings',$data);
+  }
 }

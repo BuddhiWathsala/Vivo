@@ -67,9 +67,9 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-4">
-                        <h1 class="page-header">
+                        <h2 class="page-header">
                             All Photographers
-                        </h1>
+                        </h2>
 
 
                     </div>
@@ -97,7 +97,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                   echo "</div>";
                   echo "<div class=\"panel-body\">";
                   echo "<div class=\"row\">";
-                  echo "<img src=\"$base/images/team/1.jpg\" class=\"img-rounded\" alt=\"Cinque Terre\" width=\"100\" height=\"100\">";
+                  echo "<img src=\"$base/images/team/$i.jpg\" class=\"img-rounded\" alt=\"Cinque Terre\" width=\"100\" height=\"100\">";
                   echo "</div>";
                   echo "<div class=\"row\">";
                   echo "<strong>Email : </strong>".$single_photographer->email."<br />";
@@ -120,7 +120,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                   echo "</div>";
                   echo "<div class=\"panel-body\">";
                   echo "<div class=\"row\">";
-                  echo "<img src=\"$base/images/team/2.jpg\" class=\"img-rounded\" alt=\"Cinque Terre\" width=\"100\" height=\"100\">";
+                  echo "<img src=\"$base/images/team/$i.jpg\" class=\"img-rounded\" alt=\"Cinque Terre\" width=\"100\" height=\"100\">";
                   echo "</div>";
                   echo "<div class=\"row\">";
                   echo "<strong>Email : </strong>".$single_photographer->email."<br />";

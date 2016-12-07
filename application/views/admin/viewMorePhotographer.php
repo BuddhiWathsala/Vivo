@@ -67,9 +67,9 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                 <!-- Page Heading -->
                 <div class="row">
                     <div class="col-lg-4">
-                        <h1 class="page-header">
+                        <h2 class="page-header">
                             <?php echo $photographers->name; ?>
-                        </h1>
+                        </h2>
 
 
                     </div>

@@ -7,8 +7,9 @@
 /* Global Styles */
 
 body {
-    margin-top: 100px;
+    margin-top: 0px;
     //background-color: #99bbff;
+    padding-top: 0px;
 }
 
 @media(min-width:768px) {
@@ -23,7 +24,8 @@ body {
 
 #page-wrapper {
     width: 100%;
-    padding: 0;
+    padding-top: 0px;
+    margin-top: 0px;
     background-color: #fff;
 }
 
@@ -46,7 +48,8 @@ body {
 /* Top Navigation */
 
 .top-nav {
-    padding: 0 15px;
+    padding: 0 2px;
+    height: 400px;
 
 }
 

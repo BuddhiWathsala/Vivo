@@ -29,6 +29,17 @@ class M_Photographer_table extends CI_Model {
     return ($photographers->result());
 	}
 
+  //get all photographer details
+  public function getRankings()
+	{
+    $this->load->database();
+    $this->db->select('name, points,no_of_events');
+    $this->db->order_by("points", "asc");
+    $photographers = $this->db->get("photographer");
+    return ($photographers->result());
+	}
+
+
 //get photographer detail from id
   public function getPhotographerFromID($id)
 	{

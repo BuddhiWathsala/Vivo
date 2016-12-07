@@ -45,7 +45,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
           <div class="container">
             <div class="navbar-header">
               <!-- Logo Starts -->
-              <a class="navbar-brand" href="#home"><img src="<?php echo base_url('images/logo.png'); ?>" alt="logo"></a>
+              <a class="navbar-brand" href="#home"><img src="<?php echo base_url('images/logo1.png'); ?>" alt="logo"></a>
               <!-- #Logo Ends -->
 
 
@@ -85,7 +85,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div id="home">
 
 <!-- Slider Starts -->
-<div id="myCarousel" class="carousel slide banner-slider animated bounceInDown" data-ride="carousel">     
+<div id="myCarousel" class="carousel slide banner-slider animated bounceInDown" data-ride="carousel">
       <div class="carousel-inner">
         <!-- Item 1 -->
         <!--<div class="item active">
@@ -127,16 +127,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- Cirlce Starts -->
 <div id="about"  class="container spacer about">
-<h2 class="text-center wowload fadeInUp" style="color: white">Creative photographers of VIVO</h2>  
+<h2 class="text-center wowload fadeInUp" style="color: white">Creative photographers of VIVO</h2>
   <div class="row">
   <div class="col-sm-6 wowload fadeInLeft">
     <h4 style="color: white"><i class="fa fa-camera-retro"></i> Introduction</h4>
     <p style="color: white">We are the total event solution company that believes great work comes from the heart, mind, and gut! Which provides one stop for all event requirements.We ensure all your special events are captured by us.Vivo photography prides ourselves on giving maximum value for money, researching options and working at all times to your exact budget and requirements. It is our success in this area that allows our clients to come back to us time and time again for fantastic events.</p>
   </div>
-  
+
   <div class="col-sm-6 wowload fadeInRight">
   <h4 style="color: white"><i class="fa fa-flag"></i> Vision</h4>
-  <p style="color: white">We all photograph for our own reasons. For many of us, photography is a long journey, starting with capturing images that might be considered snapshots such as a vacation or family celebration. For many, the satisfaction of taking those snapshots is enough.  We dig for deeper meaning by seeking to convey our inspiration, emotions and ideals of our own perfect world.</p>    
+  <p style="color: white">We all photograph for our own reasons. For many of us, photography is a long journey, starting with capturing images that might be considered snapshots such as a vacation or family celebration. For many, the satisfaction of taking those snapshots is enough.  We dig for deeper meaning by seeking to convey our inspiration, emotions and ideals of our own perfect world.</p>
   </div>
   </div>
 
@@ -145,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<ul class="row text-center list-inline  wowload bounceInUp">
 
 
-    
+
    		<li>
             <span><i class="fa fa-camera-retro"></i><b>Photography</b></span>
         </li>
@@ -157,7 +157,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </li>
         <li>
             <span><i class="fa fa-umbrella"></i><b>Travel</b></span>
-        </li>        
+        </li>
         <li>
             <span><i class="fa fa-heart-o"></i><b>Wedding</b></span>
         </li>
@@ -168,13 +168,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <?php echo base_url(); ?>
 <!-- works -->
-<div id="works"  class=" clearfix grid"> 
+<div id="works"  class=" clearfix grid">
     <figure class="effect-oscar  wowload fadeInUp">
         <img src="<?php echo base_url('images/portfolio/1.png');?>" alt="img01"/>
         <figcaption>
             <h2>Nature</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/1.png');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/1.png');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -182,7 +182,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>Wedding</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/2.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/2.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -190,7 +190,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>Functions</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/3.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/3.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -198,7 +198,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>Products</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/4.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/4.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
      <figure class="effect-oscar  wowload fadeInUp">
@@ -206,16 +206,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>BirthDays</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/5.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/5.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
-     
+
      <figure class="effect-oscar  wowload fadeInUp">
         <img src="<?php echo base_url('images/portfolio/6.jpg');?>" alt="img01"/>
         <figcaption>
             <h2>Convocations</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/6.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/6.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -223,7 +223,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>Ceramony</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/7.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/7.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -231,7 +231,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>Dicrap</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/8.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/8.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -239,7 +239,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>Coffee</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/9.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/9.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -247,7 +247,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>cameras</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/10.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/10.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -255,7 +255,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>design</h2>
             <p>Vivo Photography<br>
-            <a href="<?php echo base_url('images/portfolio/11.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/11.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
     <figure class="effect-oscar  wowload fadeInUp">
@@ -263,12 +263,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <figcaption>
             <h2>studio</h2>
             <p>Lily likes to play with crayons and pencils<br>
-            <a href="<?php echo base_url('images/portfolio/12.jpg');?>" title="1" data-gallery>View more</a></p>            
+            <a href="<?php echo base_url('images/portfolio/12.jpg');?>" title="1" data-gallery>View more</a></p>
         </figcaption>
     </figure>
-    
 
-     
+
+
 </div>
 <!-- works -->
 
@@ -286,11 +286,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 
     <div id="carousel-testimonials" class="carousel slide testimonails  wowload fadeInRight" data-ride="carousel">
-    <div class="carousel-inner">  
+    <div class="carousel-inner">
       <div class="item active animated bounceInRight row">
       <div class="animated slideInLeft col-xs-2"><img alt="portfolio" src="images/team/1.jpg" width="100" class="img-circle img-responsive"></div>
       <div  class="col-xs-10">
-      <p> I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. </p>      
+      <p> I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness. </p>
       <span>Angel Smith - <b>eshop Canada</b></span>
       </div>
       </div>
@@ -328,12 +328,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!-- team -->
 <h3 class="text-center  wowload fadeInUp" style="color: white">Our team</h3>
 <p class="text-center  wowload fadeInLeft" style="color: white">Our creative team that is making everything possible</p>
-<div class="row grid team  wowload fadeInUpBig">	
+<div class="row grid team  wowload fadeInUpBig">
 	<div class=" col-sm-3 col-xs-6">
 	<figure class="effect-chico">
         <img src="<?php echo base_url('images/team/8.jpg');?>" alt="img01" class="img-responsive" />
         <figcaption>
-            <p><b>Lahiru Sen</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
+            <p><b>Lahiru Sen</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>
         </figcaption>
     </figure>
     </div>
@@ -341,8 +341,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <div class=" col-sm-3 col-xs-6">
 	<figure class="effect-chico">
         <img src="<?php echo base_url('images/team/10.jpg');?>" alt="img01"/>
-        <figcaption>            
-            <p><b>Mahesh Bansa</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>            
+        <figcaption>
+            <p><b>Mahesh Bansa</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>
         </figcaption>
     </figure>
     </div>
@@ -351,7 +351,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	<figure class="effect-chico">
         <img src="<?php echo base_url('images/team/12.jpg');?>" alt="img01"/>
         <figcaption>
-            <p><b>Pramod Weera</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>          
+            <p><b>Pramod Weera</b><br>Senior Designer<br><br><a href="#"><i class="fa fa-dribbble"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-twitter"></i></a></p>
         </figcaption>
     </figure>
     </div>
@@ -365,7 +365,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     </figure>
     </div>
 
- 
+
 </div>
 <!-- team -->
 
@@ -413,15 +413,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--Contact Starts-->
 <div class="container contactform center">
 <h2 class="text-center  wowload fadeInUp" style="color: white">Get in touch to Login</h2>
-  <div class="row wowload fadeInLeftBig">      
-      <div class="col-sm-6 col-sm-offset-3 col-xs-12">   
+  <div class="row wowload fadeInLeftBig">
+      <div class="col-sm-6 col-sm-offset-3 col-xs-12">
       <form action="<?php echo base_url('index.php/User/login');?>" method="POST">
-        
+
         <input class="fa fa-user-o" type="text" placeholder="User Name" name="username">
         <input type="Password" placeholder="Password" name="password">
         <!--<textarea rows="5" placeholder="Message"></textarea>-->
         <button type="submit" name="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Login</button>
-      </form>   
+      </form>
       </div>
   </div>
 
@@ -454,7 +454,7 @@ Copyright 2014 VIVO Creative Studio. All rights reserved.
     <a class="prev">‹</a>
     <a class="next">›</a>
     <a class="close">×</a>
-    <!-- The modal dialog, which will be used to wrap the lightbox content -->    
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
 </div>
 
 

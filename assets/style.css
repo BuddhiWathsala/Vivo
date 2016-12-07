@@ -30,7 +30,8 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 .btn-primary:hover,.btn-primary:active,.btn-primary:focus{background:#f3c024;box-shadow: none;}
 
 .topbar {background:url(../images/lines.png);	height:5px;position: fixed;top: 0;width: 100%;z-index: 1000;}
-.navbar-nav > li > a{font-size: 1em;line-height: 3.6em;}
+.navbar-nav > li > a{font-size: 1em;line-height: 2em;}
+
 .navbar-fixed-top{top: 5px;}
 .navbar-inverse{background: #001a4d;}
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{background: none;color: red;}
@@ -151,7 +152,7 @@ p{font-size:1em;line-height: 1.7em; margin-bottom: 1.7em;}
 	.footer{margin-top: 2em;padding-bottom: 2em;}
 }
 /*my css */
-body { padding-top: 100px; }
+body { padding-top: 0px; }
 #nav-left{
 	background-color: #00264d;
 	padding-top: 8px;
@@ -165,5 +166,5 @@ body { padding-top: 100px; }
 
 #nav-left li{
 	width:100%;
-	height: 40px;
+	height: 20px;
 }
