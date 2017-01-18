@@ -77,20 +77,13 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                 <!-- /.row -->
                 <div class="row">
                   <div  class="col-sm-8">
-                    <div id="piechart" style="width: 900px; height: 500px;">
+                    <div id="columnchart_material" style="width: 700px; height: 400px;">
                       pie
                     </div>
                   </div>
 
                 </div>
 
-                <div class="row">
-                  <div  class="col-sm-8">
-                    <div id="columnchart_material" style="width: 900px; height: 500px;">
-                    </div>
-                  </div>
-
-                </div>
 
 
                 </div>
@@ -109,13 +102,22 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
           foreach ($result_1 as $object)
           {
 
-            $result[$i] = array($object->name,(($object->points)/($object->no_of_events))) ;
+            $result[$i] = array((($object->points)/($object->no_of_events)),$object->name) ;
             $i++;
           }
-          array_multisort($result);
-          array_unshift($result,array("Name","Points"));
-          print_r($result);
+          array_multisort($result,SORT_DESC);
+          $j= 0;
+          foreach ($result as $object)
+          {
 
+            $result_2[$j] = array($object[1],$object[0]) ;
+            $j++;
+            if($j == 5)
+                break;
+          }
+          
+          array_unshift($result_2,array("Name","Points"));
+       
      ?>
     <!-- /#wrapper -->
 
@@ -131,7 +133,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script type="text/javascript">
-      var result =JSON.parse( '<?php echo json_encode($result) ?>' );
+      var result =JSON.parse( '<?php echo json_encode($result_2) ?>' );
 
 
       google.charts.load('current', {'packages':['bar']});
@@ -143,7 +145,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
 
         var options1 = {
           chart: {
-            title: 'Student GPA According to the Course',
+            title: 'Photographers who has maximum average points',
             subtitle: '',
             is3D: true,
           }
@@ -154,30 +156,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
         chart1.draw(data1, options1);
   }
 </script>
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript">
-      google.charts.load('current', {'packages':['corechart']});
-      google.charts.setOnLoadCallback(drawChart);
-      function drawChart() {
 
-        var data = google.visualization.arrayToDataTable([
-          ['Task', 'Hours per Day'],
-          ['Work',     11],
-          ['Eat',      2],
-          ['Commute',  2],
-          ['Watch TV', 2],
-          ['Sleep',    7]
-        ]);
-
-        var options = {
-          title: 'My Daily Activities'
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-        chart.draw(data, options);
-      }
-    </script>
 
 
 

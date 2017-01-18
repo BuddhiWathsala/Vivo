@@ -80,33 +80,28 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
 
             <?php
             //print_r($photographers);
-            if(isset($photographers))
+            if(isset($customers))
             {
               $i = 0;
               $base = base_url();
-              foreach ($photographers as $single_photographer)
+              foreach ($customers as $single_customer)
               {
                 if($i%3 == 0)
                 {
                   echo "</div>";
                   echo "<div class=\"row\" style=\"padding-left:10px;\">";
-                  echo "<div class=\"col-sm-4\">";
+                  echo "<div class=\"col-sm-4\" >";
                   echo "<div class=\"panel panel-green\">";
                   echo "<div class=\"panel-heading\">";
-                  echo "<h3 class=\"panel-title\">$single_photographer->name</h3>";
+                  echo "<h3 class=\"panel-title\">$single_customer->name</h3>";
                   echo "</div>";
                   echo "<div class=\"panel-body\">";
                   echo "<div class=\"row\" style=\"padding-left:10px;\">";
-                  echo "<img src=".$base.($single_photographer->profile_picture)." class=\"img-rounded\" alt=\"Cinque Terre\" width=\"100\" height=\"100\">";
-                  echo "</div><br />";
-                  echo "<div class=\"row\" style=\"padding-left:10px;\">";
-                  echo "<strong>Email : </strong>".$single_photographer->email."<br /><br />";
-                  echo "<strong>Mobile : </strong>".$single_photographer->mobile_phone."<br /><br />";
-                  echo "<strong>Land phone : </strong>".$single_photographer->land_phone."<br /><br />";
-                  echo "<strong>District : </strong>".$single_photographer->district."<br /><br />";
-                  echo "<strong>Category : </strong>".$categories[$single_photographer->category]."<br /><br />";
-                  echo "<strong>Points : </strong>".$single_photographer->points."<br /><br />";
-                  echo "<strong><a align=\"right\" href=\"$base/index.php/C_Admin_Page_Navigate/viewMoreProtographer/$single_photographer->photographer_id/\">View more</a></strong>";
+                  echo "<strong>Email : </strong>".$single_customer->nic."<br /><br />";
+                  echo "<strong>Mobile : </strong>".$single_customer->username."<br /><br />";
+                  echo "<strong>Land phone : </strong>".$single_customer->contact_no."<br /><br />";
+                  echo "<strong>District : </strong>".$single_customer->email."<br /><br />";
+                  echo "<strong>Category : </strong>".$single_customer->join_date."<br /><br />";
                   echo "</div>";
                   echo "</div>";
                   echo "</div>";
@@ -116,20 +111,15 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                   echo "<div class=\"col-sm-4\">";
                   echo "<div class=\"panel panel-green\">";
                   echo "<div class=\"panel-heading\">";
-                  echo "<h3 class=\"panel-title\">$single_photographer->name</h3>";
+                  echo "<h3 class=\"panel-title\">$single_customer->name</h3>";
                   echo "</div>";
                   echo "<div class=\"panel-body\">";
-                  echo "<div class=\"row\">";
-                  echo "<img src=".$base.($single_photographer->profile_picture)." alt=\"Cinque Terre\" width=\"100\" height=\"100\">";
-                  echo "</div><br />";
                   echo "<div class=\"row\" style=\"padding-left:10px;\">";
-                  echo "<strong>Email : </strong>".$single_photographer->email."<br /><br />";
-                  echo "<strong>Mobile : </strong>".$single_photographer->mobile_phone."<br /><br />";
-                  echo "<strong>Land phone : </strong>".$single_photographer->land_phone."<br /><br />";
-                  echo "<strong>District : </strong>".$single_photographer->district."<br /><br />";
-                  echo "<strong>Category : </strong>".$categories[$single_photographer->category]."<br /><br />";
-                  echo "<strong>Points : </strong>".$single_photographer->points."<br /><br />";
-                  echo "<strong><a align=\"right\" href=\"$base/index.php/C_Admin_Page_Navigate/viewMoreProtographer/$single_photographer->photographer_id/\">View more</a></strong>";
+                  echo "<strong>Email : </strong>".$single_customer->nic."<br /><br />";
+                  echo "<strong>Mobile : </strong>".$single_customer->username."<br /><br />";
+                  echo "<strong>Land phone : </strong>".$single_customer->contact_no."<br /><br />";
+                  echo "<strong>District : </strong>".$single_customer->email."<br /><br />";
+                  echo "<strong>Category : </strong>".$single_customer->join_date."<br /><br />";
                   echo "</div>";
                   echo "</div>";
                   echo "</div>";

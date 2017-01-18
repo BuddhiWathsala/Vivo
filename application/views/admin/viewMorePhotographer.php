@@ -197,7 +197,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                     </div>
                   </div>
                   <div class="col-sm-4">
-                    <img src="<?php echo base_url();?>/images/team/1.jpg" class="img-rounded" alt="Cinque Terre" width="400" height="400">
+                    <img src="<?php echo base_url().$photographers->profile_picture;?>" class="img-rounded" alt="Cinque Terre" width="400" height="400">
                   </div>
 
                 </div>

@@ -26,11 +26,9 @@
             <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-user fa-fw" ></i>Customers <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="demo1" class="collapse">
                 <li>
-                    <a href="#">View all</a>
+                    <a href="<?php echo base_url();?>index.php/C_Admin_Page_Navigate/viewAllCustomers">View all</a>
                 </li>
-                <li>
-                    <a href="#">Add Photographer</a>
-                </li>
+
             </ul>
         </li>
 

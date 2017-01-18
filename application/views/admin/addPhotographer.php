@@ -78,7 +78,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
 
 
 
-                <form role="form" method=post action="<?php echo base_url();?>index.php/C_Admin_Forms/insertData/">
+                <form role="form" method=post action="<?php echo base_url();?>index.php/C_Admin_Forms/insertData/"  enctype = "multipart/form-data">
 
                     <div class="form-group">
                       <div class="row">
@@ -245,6 +245,15 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                         </div>
                       </div>
                       <br  />
+                      
+                      <div class="row">
+                        <div class="col-sm-2">
+                          <label>Profile picture </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="file" name="image" />
+                        </div>
+                      </div>
 
                       <div class="row">
                         <div class="col-sm-2">
@@ -294,13 +303,13 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
     	$username = $("#username").val();
 
     	//alert($repassword);
-    	if ($username.length > 0)
+    	if ($username.length >= 0)
     	{
           //alert($username);
-    	    $.get("<?php echo base_url();?>index.php/C_Admin_Forms/validateAddPhotographer/"+$username,{},function ($data) {
+    	    $.post("<?php echo base_url();?>index.php/C_Admin_Forms/validateAddPhotographer/",{'username':$username},function ($data) {
     	        $("#validate_username").html($data);
 
-              if(($data.search("User Already exists") > 0) )
+              if(($data.search("User Already exists") > 0) || ($data.search("Please enter a user name"))>0)
               {
                 document.getElementById('addPhotographer').disabled = true;
               }else{

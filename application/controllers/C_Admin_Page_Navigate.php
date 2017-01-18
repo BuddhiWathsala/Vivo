@@ -72,4 +72,16 @@ class C_Admin_Page_Navigate extends CI_Controller {
     $data["photographers"] = $photographers;
     $this->load->view('admin/topRankings',$data);
   }
+
+//load all customers
+  public function viewAllCustomers()
+  {
+    $this->load->model('M_Customer_table');
+    $customers = $this->M_Customer_table->getAllCustomers();
+
+
+    $returnData['customers']= $customers;
+    
+    $this->load->view('admin/viewAllCustomers',$returnData);
+  }
 }
