@@ -11,8 +11,17 @@ class M_Customer_table extends CI_Model {
 	{
     $this->load->database();
 
-    $photographers = $this->db->get("customer");
-    return ($photographers->result());
+    $customers = $this->db->get("customer");
+    return ($customers->result());
 	}
+
+  //get all customer details from nic
+  public function getCustomerFromNIC($nic)
+  {
+    $this->load->database();
+
+    $customer = $this->db->get_where("customer",array('nic'=> $nic));
+    return ($customer->result());
+  }
 
 }

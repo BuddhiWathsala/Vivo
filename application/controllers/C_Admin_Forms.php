@@ -179,7 +179,7 @@ class C_Admin_Forms extends CI_Controller {
       $this->load->model('M_Event_table');
       $result = $this->M_Event_table->getNewEvents();
       $data['newEvents'] = $result;
-      $this->load->view('admin',$data);
+      $this->load->view('admin/addPhotographer',$data);
     }else {
       $this->load->library('session');
       $_SESSION['loginMessage'] = "Incorrect Username/Password";
@@ -205,6 +205,7 @@ class C_Admin_Forms extends CI_Controller {
       $photographerDeatils = $this->M_Photographer_table->getPhotographerFromID($photographer);
       if($flag)
       {
+        $mail = new PHPMailer;
         $mail->isSMTP();                                      // Set mailer to use SMTP
         $mail->Host = 'smtp.gmail.com';              // Specify main and backup SMTP servers
         $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -216,8 +217,9 @@ class C_Admin_Forms extends CI_Controller {
         $mail->From = 'webmisproject@gmail.com';
         $mail->FromName = 'Mailer';
     //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
-        $mail->addAddress(($customerDetails[0])->email);
-        $mail->addAddress(($photographerDeatils[0])->email);
+        $mail->addAddress('b.wathsala.bw@gmail.com');
+        //$mail->addAddress($photographerDeatils[0]->email);
+        //print_r(($customerDetails[0]));
         //$mail->addAddress($email);// Name is optional
     //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
     //$mail->addAttachment("img/vendor images/" . $_FILES['desimage']['name']);    // Optional name
@@ -228,9 +230,9 @@ class C_Admin_Forms extends CI_Controller {
         $mail->AltBody = 'ok';
 
         if (!$mail->send()) {
-             $_SESSION['confirmEventMessage'] = "Successfuly confirm this event";
+             $_SESSION['confirmEventMessage'] = "Successfuly confirm but contact error please send mail to customer mannualy";
         } else {
-            $_SESSION['confirmEventMessage'] = "Successfuly confirm but contact error please send mail to customer mannualy";
+            $_SESSION['confirmEventMessage'] = "Successfuly confirm this event";
         }
 
       }else{
@@ -251,6 +253,67 @@ class C_Admin_Forms extends CI_Controller {
 
     $this->load->view('admin/viewNewEvents',$returnData);
   }
+
+  //reject event
+
+
+  public function rejectEvent($event_id,$customer_nic)
+  {
+
+      $this->load->library('session');
+
+
+      $this->load->model('M_Event_table');
+      $flag = $this->M_Event_table->deleteEventByID($event_id);
+
+      $this->load->model('M_Customer_table');
+      $customerDetails = $this->M_Customer_table-> getCustomerFromNIC($customer_nic);
+
+      if($flag)
+      {
+        $mail = new PHPMailer;
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';              // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'webmisproject@gmail.com';                 // SMTP username
+        $mail->Password = '#5group135#';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
+
+        $mail->From = 'webmisproject@gmail.com';
+        $mail->FromName = 'Mailer';
+
+        $mail->addAddress('b.wathsala.bw@gmail.com');
+
+        $mail->isHTML(true);                                  // Set email format to HTML
+
+        $mail->Subject = 'Your event was rejected';
+        $mail->Body = 'ok';
+        $mail->AltBody = 'ok';
+
+        if (!$mail->send()) {
+             $_SESSION['confirmEventMessage'] = "Successfuly reject the event";
+        } else {
+            $_SESSION['confirmEventMessage'] = "Successfuly reject the event";
+        }
+
+      }else{
+        $_SESSION['confirmEventMessage'] = "Rejection  error";
+      }
+
+
+
+
+    $this->load->model('M_Customer_table');
+    $events = $this->M_Event_table->getNewEvents();
+    $customers = $this->M_Customer_table->getAllCustomers();
+
+    $returnData['newEventsMore']= $events;
+    $returnData['customers'] = $customers;
+
+    $this->load->view('admin/viewNewEvents',$returnData);
+  }
+
 }
 
 ?>

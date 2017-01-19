@@ -17,6 +17,10 @@ class C_Admin_Page_Navigate extends CI_Controller {
       $i +=1;
 
     }
+
+    $this->load->model('M_Event_table');
+    $result = $this->M_Event_table->getNewEvents();
+    $returnData['newEvents'] = $result;
     $returnData['data']= $data;
     $this->load->view('admin/addPhotographer',$returnData);
   }
@@ -36,6 +40,9 @@ class C_Admin_Page_Navigate extends CI_Controller {
       $data["$object->category_id"] = $object->name;
 
     }
+    $this->load->model('M_Event_table');
+    $result = $this->M_Event_table->getNewEvents();
+    $returnData['newEvents'] = $result;
 
     $returnData['photographers']= $photographers;
     $returnData['categories']= $data;
@@ -57,6 +64,11 @@ class C_Admin_Page_Navigate extends CI_Controller {
       $data["$object->category_id"] = $object->name;
 
     }
+
+    $this->load->model('M_Event_table');
+    $result = $this->M_Event_table->getNewEvents();
+    $returnData['newEvents'] = $result;
+
     $photographers[0]->category=$data[$photographers[0]->category];
     $returnData['photographers']= $photographers[0];
 
@@ -79,7 +91,9 @@ class C_Admin_Page_Navigate extends CI_Controller {
     $this->load->model('M_Customer_table');
     $customers = $this->M_Customer_table->getAllCustomers();
 
-
+    $this->load->model('M_Event_table');
+    $result = $this->M_Event_table->getNewEvents();
+    $returnData['newEvents'] = $result;
     $returnData['customers']= $customers;
 
     $this->load->view('admin/viewAllCustomers',$returnData);

@@ -85,6 +85,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
               foreach ($customers as $value) {
                 if($value->nic == $nic)
                 {
+                  //print_r($value);
                   return $value;
                 }
                 # code...
@@ -96,8 +97,10 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
               //print_r($customers);
               $i = 0;
               $base = base_url();
+              //print_r($customers);
               foreach ($newEventsMore as $single_event)
               {
+              //print_r(getCustemerDetails($customers,$single_event->customer_nic)->name) ;
                 if($i%3 == 0)
                 {
                   echo "</div>";
@@ -112,11 +115,11 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                   echo "<strong>Email : </strong>".$single_event->date."<br /><br />";
                   echo "<strong>Mobile : </strong>".$single_event->time."<br /><br />";
                   echo "<strong>Land phone : </strong>".$single_event->location."<br /><br />";
-                  echo "<strong>Customer name : </strong>".(getCustemerDetails($customers,$single_event->customer_nic))->name."<br /><br />";
-                  echo "<strong>Customer Email : </strong>".(getCustemerDetails($customers,$single_event->customer_nic))->email."<br /><br />";
+                  echo "<strong>Customer name : </strong>".getCustemerDetails($customers,$single_event->customer_nic)->name."<br /><br />";
+                  echo "<strong>Customer Email : </strong>".getCustemerDetails($customers,$single_event->customer_nic)->email."<br /><br />";
                   echo "<a align=\"right\" href=\"$base/index.php/C_Admin_Common/viewMoreEvent/$single_event->event_id/\">
-                  <button style=\"background-color:green\" type=\"button\" class=\"btn btn-success btn-xs\">Accept</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-                  echo "<a align=\"right\" href=\"$base/index.php/C_Admin_Page_Navigate/viewMoreEvent/$single_event->event_id/\">
+                  <button style=\"background-color:green\" type=\"button\" class=\"btn btn-success btn-xs\">Set Event</button>&nbsp;";
+                  echo "<a align=\"right\" href=\"$base/index.php/C_Admin_Forms/rejectEvent/$single_event->event_id/$single_event->customer_nic\">
                   <button style=\"background-color:red\" class=\"btn btn-danger btn-xs\">Reject</button></a>";
                   echo "</div>";
                   echo "</div>";
@@ -124,7 +127,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                   echo "</div>";
                 }else
                 {
-                  echo "<div class=\"col-sm-4\">";
+                  echo "<div class=\"col-sm-4\" >";
                   echo "<div class=\"panel panel-green\">";
                   echo "<div class=\"panel-heading\">";
                   echo "<h3 class=\"panel-title\">$single_event->name</h3>";
@@ -134,14 +137,16 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                   echo "<strong>Email : </strong>".$single_event->date."<br /><br />";
                   echo "<strong>Mobile : </strong>".$single_event->time."<br /><br />";
                   echo "<strong>Land phone : </strong>".$single_event->location."<br /><br />";
-                  echo "<a align=\"right\" href=\"$base/index.php/C_Admin_Common/sendMailAccept/$single_event->event_id/\"><button style=\"background-color:green\" type=\"button\" class=\"btn btn-success btn-xs\">Accept</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-                  echo "<a align=\"right\" href=\"$base/index.php/C_Admin_Page_Navigate/viewMoreEvent/$single_event->event_id/\"><button style=\"background-color:red\" class=\"btn btn-danger btn-xs\">Reject</button></a>";
+                  echo "<strong>Customer name : </strong>".getCustemerDetails($customers,$single_event->customer_nic)->name."<br /><br />";
+                  echo "<strong>Customer Email : </strong>".getCustemerDetails($customers,$single_event->customer_nic)->email."<br /><br />";
+                  echo "<a align=\"right\" href=\"$base/index.php/C_Admin_Common/viewMoreEvent/$single_event->event_id/\">
+                  <button style=\"background-color:green\" type=\"button\" class=\"btn btn-success btn-xs\">Accept</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+                  echo "<a align=\"right\" href=\"$base/index.php/C_Admin_Page_Navigate/viewMoreEvent/$single_event->event_id/\">
+                  <button style=\"background-color:red\" class=\"btn btn-danger btn-xs\">Reject</button></a>";
                   echo "</div>";
                   echo "</div>";
                   echo "</div>";
                   echo "</div>";
-                  echo "</div>";
-
                 }
                 $i++;
               }

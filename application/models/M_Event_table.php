@@ -29,5 +29,15 @@ class M_Event_table extends CI_Model {
   }
 
 
+//delete event by id
+public function deleteEventByID($event_id)
+{
+  $this->load->database();
+
+  $query = "delete from event where event_id = $event_id";
+  $result = $this->db->query($query);
+  return ($result);
+}
+
 
 }

@@ -245,7 +245,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                         </div>
                       </div>
                       <br  />
-                      
+
                       <div class="row">
                         <div class="col-sm-2">
                           <label>Profile picture </label>

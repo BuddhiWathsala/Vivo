@@ -6,9 +6,7 @@
 ?>
     <ul class="nav navbar-nav side-nav">
 
-      <li>
-          <a href="charts.html"><i class="fa fa-user fa-fw" aria-hidden="true"></i> Profile</a>
-      </li>
+      <br/>
 
       <li>
           <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-camera-retro fa-lg"></i></i> Photogrphers <i class="fa fa-fw fa-caret-down"></i></a>
@@ -39,14 +37,6 @@
         <li class="active">
             <a href="<?php echo base_url();?>index.php/C_Admin_Page_Navigate/viewNewEvents""><i class="fa fa-fw fa-dashboard"></i>New Events <span class="badge"><?php  echo $count;?></span></a>
         </li>
-        <li>
-            <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>
-        </li>
-        <li>
-            <a href="tables.html"><i class="fa fa-fw fa-table"></i> Tables</a>
-        </li>
-        <li>
-            <a href="forms.html"><i class="fa fa-fw fa-edit"></i> Forms</a>
-        </li>
+
 
     </ul>
