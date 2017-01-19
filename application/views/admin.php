@@ -41,9 +41,10 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
         <!-- Navigation -->
         <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <!-- Brand and toggle get grouped for better mobile display -->
+
             <?php $this->load->view('includes/header.php'); ?>
             <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
-          <?php $this->load->view('includes/admin_nav/admin_nav_active_profile.php'); ?>
+          <?php $this->load->view('includes/admin_nav/admin_nav_active_profile.php',$newEvents); ?>
             <!-- /.navbar-collapse -->
         </nav>
 
@@ -168,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                 </div>
                 <!-- /.row -->
 
-                
+
                 <!-- /.row -->
 
                 <div class="row">

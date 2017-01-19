@@ -63,7 +63,7 @@ class C_Admin_Page_Navigate extends CI_Controller {
     $this->load->view('admin/viewMorePhotographer',$returnData);
   }
 
-
+  //get top ranking photographers
   public function topRankings()
   {
 
@@ -81,7 +81,22 @@ class C_Admin_Page_Navigate extends CI_Controller {
 
 
     $returnData['customers']= $customers;
-    
+
     $this->load->view('admin/viewAllCustomers',$returnData);
   }
+
+
+  //load all new events
+    public function viewNewEvents()
+    {
+      $this->load->model('M_Event_table');
+      $this->load->model('M_Customer_table');
+      $events = $this->M_Event_table->getNewEvents();
+      $customers = $this->M_Customer_table->getAllCustomers();
+
+      $returnData['newEventsMore']= $events;
+      $returnData['customers'] = $customers;
+
+      $this->load->view('admin/viewNewEvents',$returnData);
+    }
 }

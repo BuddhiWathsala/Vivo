@@ -1,0 +1,8 @@
+insert into event values(2,'Engagement','2018-11-07','10:00:00','Engagement',0,'Engagement',3,'images/albums/wedding/');
+insert into event values(3,'Birthday','2018-1-07','11:00:00','birthday',0,'birthday',1,'images/albums/bd/');
+
+insert into event_allocation values(1,1);
+
+select event.name,event_allocation.photographer,event_allocation.event from event 
+left outer join event_allocation on event.event_id = event_allocation.event 
+where event is null;

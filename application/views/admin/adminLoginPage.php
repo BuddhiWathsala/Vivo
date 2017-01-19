@@ -240,7 +240,7 @@ input[type="submit"] .spinner {
     <i class="fa fa-user"></i>
     <input type="password" name="password" placeholder="Password" required/>
     <i class="fa fa-key"></i>
-    <a href="root/english/php/admin/main_login.php">Forgot your password?</a>
+    <a href="">Forgot your password?</a>
     <button name="mainlogin">
       <i class="spinner"></i>
       <input type="submit" name="mainlogin" value="Log in" />

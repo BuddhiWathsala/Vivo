@@ -1,4 +1,9 @@
-
+<?php if(isset($newEvents)){
+      $count = count($newEvents);
+      }else {
+              $count = 0;
+            }
+?>
     <ul class="nav navbar-nav side-nav">
 
       <li>
@@ -21,7 +26,6 @@
       </li>
 
 
-
         <li>
             <a href="javascript:;" data-toggle="collapse" data-target="#demo1"><i class="fa fa-user fa-fw" ></i>Customers <i class="fa fa-fw fa-caret-down"></i></a>
             <ul id="demo1" class="collapse">
@@ -33,7 +37,7 @@
         </li>
 
         <li class="active">
-            <a href="index.html"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
+            <a href="<?php echo base_url();?>index.php/C_Admin_Page_Navigate/viewNewEvents""><i class="fa fa-fw fa-dashboard"></i>New Events <span class="badge"><?php  echo $count;?></span></a>
         </li>
         <li>
             <a href="charts.html"><i class="fa fa-fw fa-bar-chart-o"></i> Charts</a>

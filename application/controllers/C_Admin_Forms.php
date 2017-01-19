@@ -2,7 +2,7 @@
 
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-
+require 'master/PHPMailerAutoload.php';
 class C_Admin_Forms extends CI_Controller {
 
 
@@ -59,6 +59,7 @@ class C_Admin_Forms extends CI_Controller {
 
   }
 
+//validate re password
   public function validateRePassword()
   {
     $password = $_POST['password'];
@@ -73,6 +74,7 @@ class C_Admin_Forms extends CI_Controller {
     }
   }
 
+//validate password
   public function validatePassword()
   {
     $password = $_POST['password'];
@@ -88,7 +90,7 @@ class C_Admin_Forms extends CI_Controller {
   }
 
 
-
+//insetrt data into photographers
   public function insertData()
   {
 
@@ -174,13 +176,80 @@ class C_Admin_Forms extends CI_Controller {
     }
     if($admindata[0]->password == $encryptedPassword)
     {
-      $this->load->view('admin');
+      $this->load->model('M_Event_table');
+      $result = $this->M_Event_table->getNewEvents();
+      $data['newEvents'] = $result;
+      $this->load->view('admin',$data);
     }else {
       $this->load->library('session');
       $_SESSION['loginMessage'] = "Incorrect Username/Password";
       $this->load->view('admin/adminLoginPage');
     }
 
+  }
+
+  //confirm event and add photographer with sending e-mail
+  public function confirmEvent()
+  {
+    if(isset($_POST['photographer']) && isset($_POST['event']))
+    {
+      $this->load->library('session');
+      $photographer = $_POST['photographer'];
+      $event = $_POST['event'];
+      echo $photographer;
+      $this->load->model('M_Event_Allocation_table');
+      $flag = $this->M_Event_Allocation_table->confirmEvent($event,$photographer);
+      $this->load->model('M_Event_table');
+      $this->load->model('M_Photographer_table');
+      $customerDetails = $this->M_Event_table->getEventDetailsByID($event);
+      $photographerDeatils = $this->M_Photographer_table->getPhotographerFromID($photographer);
+      if($flag)
+      {
+        $mail->isSMTP();                                      // Set mailer to use SMTP
+        $mail->Host = 'smtp.gmail.com';              // Specify main and backup SMTP servers
+        $mail->SMTPAuth = true;                               // Enable SMTP authentication
+        $mail->Username = 'webmisproject@gmail.com';                 // SMTP username
+        $mail->Password = '#5group135#';                           // SMTP password
+        $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+        $mail->Port = 587;                                    // TCP port to connect to
+
+        $mail->From = 'webmisproject@gmail.com';
+        $mail->FromName = 'Mailer';
+    //$mail->addAddress('joe@example.net', 'Joe User');     // Add a recipient
+        $mail->addAddress(($customerDetails[0])->email);
+        $mail->addAddress(($photographerDeatils[0])->email);
+        //$mail->addAddress($email);// Name is optional
+    //$mail->addAttachment('/var/tmp/file.tar.gz');         // Add attachments
+    //$mail->addAttachment("img/vendor images/" . $_FILES['desimage']['name']);    // Optional name
+        $mail->isHTML(true);                                  // Set email format to HTML
+
+        $mail->Subject = 'Your Event added successfully';
+        $mail->Body = 'ok';
+        $mail->AltBody = 'ok';
+
+        if (!$mail->send()) {
+             $_SESSION['confirmEventMessage'] = "Successfuly confirm this event";
+        } else {
+            $_SESSION['confirmEventMessage'] = "Successfuly confirm but contact error please send mail to customer mannualy";
+        }
+
+      }else{
+        $_SESSION['confirmEventMessage'] = "Confirmation error";
+      }
+
+    }else{
+      $_SESSION['confirmEventMessage'] = "Confirmation error";
+    }
+
+
+    $this->load->model('M_Customer_table');
+    $events = $this->M_Event_table->getNewEvents();
+    $customers = $this->M_Customer_table->getAllCustomers();
+
+    $returnData['newEventsMore']= $events;
+    $returnData['customers'] = $customers;
+
+    $this->load->view('admin/viewNewEvents',$returnData);
   }
 }
 
