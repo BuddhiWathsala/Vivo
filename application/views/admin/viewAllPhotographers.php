@@ -46,6 +46,14 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
     echo "<script type='text/javascript'>alert('".$_SESSION['insertPhotographerMessage']."')</script>";
     $_SESSION['insertPhotographerMessage'] =null;
   }
+
+
+
+  if(isset($_SESSION['deletePhotographerMessage']))
+  {
+    echo "<script type='text/javascript'>alert('".$_SESSION['deletePhotographerMessage']."')</script>";
+    $_SESSION['deletePhotographerMessage'] =null;
+  }
 ?>
 <body>
 

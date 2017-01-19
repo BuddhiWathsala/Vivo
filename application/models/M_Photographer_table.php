@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class M_Photographer_table extends CI_Model {
 
- 
+
   //get details from email
 
   //get all photographer details
@@ -20,7 +20,7 @@ class M_Photographer_table extends CI_Model {
 {
     $this->load->database();
     $this->db->select('name, points,no_of_events');
-    
+
     $this->db->where('points !=',0 );
     $this->db->order_by("points");
     $photographers = $this->db->get("photographer");
@@ -96,5 +96,13 @@ class M_Photographer_table extends CI_Model {
     {
       return false;
     }
+  }
+
+//delete photographer from id
+  public function deletePhotographer($photographer_id)
+  {
+    $this->load->database();
+    $flag = $this->db->query("delete from photographer where photographer_id = $photographer_id ");
+    return $flag;
   }
 }

@@ -314,6 +314,47 @@ class C_Admin_Forms extends CI_Controller {
     $this->load->view('admin/viewNewEvents',$returnData);
   }
 
+  //delete photographer
+  public function deletePhotographer($photographer_id)
+  {
+    $this->load->model('M_Photographer_table');
+    $flag = $this->M_Photographer_table->deletePhotographer($photographer_id);
+
+    $this->load->library('session');
+
+    if($flag)
+    {
+      $_SESSION['deletePhotographerMessage'] = "Photographer deleted successfully";
+    }else {
+      $_SESSION['deletePhotographerMessage'] = "Photographer deleted fails";
+    }
+
+    $this->load->model('M_Event_table');
+    $result = $this->M_Event_table->getNewEvents();
+    $returnData['newEvents'] = $result;
+
+    $this->load->model('M_Photographer_table');
+    $photographers = $this->M_Photographer_table->getAllPhotographers();
+
+    $this->load->model('M_Category_table');
+    $categories = $this->M_Category_table->get_all_categories();
+    $data = array();
+
+    foreach($categories->result() as $object)
+    {
+      $data["$object->category_id"] = $object->name;
+
+    }
+    $this->load->model('M_Event_table');
+    $result = $this->M_Event_table->getNewEvents();
+    $returnData['newEvents'] = $result;
+
+    $returnData['photographers']= $photographers;
+    $returnData['categories']= $data;
+    $this->load->view('admin/viewAllPhotographers',$returnData);
+    //$this->load->view('admin/viewAllPhotographers',$returnData);
+  }
+
 }
 
 ?>

@@ -194,6 +194,18 @@ defined('BASEPATH') OR exit('No direct script access ds allowed');
                       </div>
                       <br  />
 
+                    
+                      <div class="row">
+                        <div class="col-sm-4">
+
+                        </div>
+                        <div class="col-sm-4">
+                          <a align="right" href=<?php echo base_url()."/index.php/C_Admin_Forms/deletePhotographer/$photographers->photographer_id" ;?>/>
+                          <button onclick= "return confirm('Are you sure to delete');" style="background-color:red" type="button" class="btn btn-success btn-xs">Delete Photographer</button></a>&nbsp;
+                        </div>
+                      </div>
+                      <br  />
+
                     </div>
                   </div>
                   <div class="col-sm-4">
